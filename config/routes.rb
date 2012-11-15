@@ -1,4 +1,6 @@
 Creusekistan::Application.routes.draw do
+  resources :evenements
+
   resources :articles do
     resources :comments
   end
