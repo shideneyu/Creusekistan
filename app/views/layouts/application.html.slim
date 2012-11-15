@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    title Creusekistan
+    = stylesheet_link_tag "application", media: "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  body
+    div class="navbar navbar-fixed-top"
+      div class="navbar-inner"
+        div class="container"
+          a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"
+            span class="icon-bar"
+            span class="icon-bar"
+            span class="icon-bar"
+          a class="brand" href="#"
+            ' Creusekistan
+          div class="nav-collapse"
+            ul class="nav pull-right"
+              li
+                = link_to "Actualité", articles_path
+              li
+                = link_to "Manifs"
+              li
+                = link_to "Evenements"
+              li
+                = link_to "Rechercher"
+              li
+                = link_to "Livre d'Or"
+              li
+                = link_to "Connexion"
+
+    div class="logo" align="center"
+      = image_tag("logo.jpg", :border => 0, :height => "300", :width => "50%")
+    div class="container"
+      div class="row"
+        div class="span8
+          = yield
+        div class="span4"
+          h2 Definition
+          ' CREUSEKISTAN [KRØZKISTAN]. n. propre inv. ; Micro nation créée le 11.11.2011 par ses présidents autoproclamés et inamovibles André Génin (Province du sud) et Jean-Paul Renvoizé (Province du nord) dont le Premier ministre, à vie, est Eric Marchin. Le territoire du Creusekistan épouse grosso modo les contours du département français de la Creuse, mais ne comprend pas l’agglomération de Guéret. Le Creusekistan s’est fixé comme ambition de promouvoir les valeurs qui lui sont chères, notamment le bien vivre, le bien-être, la bonne bouffe, la qualité de vie, la convivialité et la franche rigolade. ◊ Devise : « Fièritude, Plénitude & Zénitude ». ◊ Identification : « CRK ». ◊ voir aussi : Creusekistan (Association Loi 1901).
