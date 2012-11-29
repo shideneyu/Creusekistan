@@ -1,0 +1,19 @@
+- model_class = Evenement.new.class
+div class="page-header"
+	h1
+		=t '.title', :default => model_class.model_name.human.pluralize
+- @evenements.each do |evenement|
+  table class="table table-striped"
+		tbody
+			h2
+				= link_to evenement.title, evenement_path(evenement)
+			tr
+				td
+					= evenement.content
+				td
+					span style="float:right;"
+						' Prendra place à
+						= evenement.place
+				td
+					= evenement.date
+= link_to t('.new', :default => t("helpers.links.new")), new_evenement_path, :class => 'btn btn-primary'
